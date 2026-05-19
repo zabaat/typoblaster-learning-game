@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypoBlaster Layout Reference</title>
+  <link rel="stylesheet" href="./typoblaster-ui.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <section class="game-header">
+      <div>
+        <p class="eyebrow">Infinite Typing Arcade</p>
+        <h1>TypoBlaster</h1>
+      </div>
+      <div class="header-actions">
+        <button class="retro-button">Start</button>
+        <button class="retro-button secondary">How to Play</button>
+      </div>
+    </section>
+
+    <section class="game-frame">
+      <div class="hud-bar">
+        <div class="hud-stat"><span>Score</span><strong>012450</strong></div>
+        <div class="hud-stat"><span>Combo</span><strong>x08</strong></div>
+        <div class="hud-stat"><span>Level</span><strong>04</strong></div>
+        <div class="hud-stat danger"><span>Lives</span><strong>♥ ♥ ♥</strong></div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="TypoBlaster game canvas"></canvas>
+
+        <div class="start-overlay">
+          <div class="modal-card">
+            <p class="eyebrow">Ready?</p>
+            <h2>Cast letters. Stop goblins.</h2>
+            <p>Press matching keys to fire letters at incoming enemies. Survive as long as you can.</p>
+            <button class="retro-button primary">Press Enter to Start</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="below-game">
+      <article class="panel-card">
+        <h3>Controls</h3>
+        <p>Press A–Z to shoot that letter. Press Enter to start or restart. Press P to pause.</p>
+      </article>
+      <article class="panel-card">
+        <h3>Goal</h3>
+        <p>Play forever, survive longer, build combos, and chase a better score each run.</p>
+      </article>
+      <article class="panel-card">
+        <h3>Juice</h3>
+        <p>Particles, tiny screen shake, score popups, enemy wobble, and satisfying hit feedback.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
