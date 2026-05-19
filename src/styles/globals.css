@@ -373,8 +373,46 @@ canvas {
 }
 
 .game-over-card {
-  max-height: min(92vh, 720px);
+  display: grid;
+  gap: 12px;
+  max-height: min(92dvh, 100%);
   overflow: auto;
+  padding: clamp(14px, 3vw, 22px);
+}
+
+.game-over-title h1 {
+  font-size: clamp(1.9rem, 5vw, 3.2rem);
+  margin-bottom: 0;
+}
+
+.game-over-title .eyebrow {
+  margin-bottom: 6px;
+}
+
+.game-over-card .final-score-block {
+  margin: 0;
+  padding: 12px;
+}
+
+.game-over-card .final-score-block strong {
+  font-size: clamp(1.8rem, 6vw, 2.6rem);
+}
+
+.game-over-card .stat-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 0;
+}
+
+.game-over-card .stat-list div {
+  padding: 8px 10px;
+}
+
+.game-over-card .menu-stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 0;
 }
 
 .pause-card {
@@ -458,6 +496,10 @@ canvas {
     align-items: stretch;
     flex-direction: column;
   }
+
+  .game-over-card .stat-list div {
+    flex-direction: row;
+  }
 }
 
 @media (max-width: 460px) {
@@ -485,6 +527,11 @@ canvas {
 
   .retro-button {
     width: 100%;
+  }
+
+  .game-over-card .stat-list,
+  .game-over-card .menu-stack {
+    grid-template-columns: 1fr;
   }
 }
 

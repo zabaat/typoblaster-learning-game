@@ -11,8 +11,10 @@ export function GameOverScreen({ snapshot, onRestart, onTitle }: GameOverScreenP
   return (
     <div className="start-overlay">
       <section className="modal-card game-over-card">
-        <p className="eyebrow danger-text">Run Complete</p>
-        <h1>Game Over</h1>
+        <div className="game-over-title">
+          <p className="eyebrow danger-text">Run Complete</p>
+          <h1>Game Over</h1>
+        </div>
 
         <div className="final-score-block">
           <span>Final Score</span>
