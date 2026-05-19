@@ -6,6 +6,10 @@ type HudProps = {
 };
 
 export function Hud({ snapshot }: HudProps) {
+  const wordProgress = snapshot.currentWord
+    ? `${snapshot.currentWord.toUpperCase()} ${snapshot.typedIndex}/${snapshot.currentWord.length}`
+    : "READY";
+
   return (
     <section className="hud-bar learning-hud" aria-label="Run status">
       <div className="hud-stat">
@@ -19,6 +23,10 @@ export function Hud({ snapshot }: HudProps) {
       <div className="hud-stat">
         <span>Words</span>
         <strong>{snapshot.wordsCompleted}</strong>
+      </div>
+      <div className="hud-stat current-word-stat">
+        <span>Word</span>
+        <strong>{wordProgress}</strong>
       </div>
       <div className="hud-stat">
         <span>Accuracy</span>

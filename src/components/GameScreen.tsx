@@ -116,7 +116,7 @@ export function GameScreen({
             spellCheck={false}
             value={typedValue}
             disabled={!isPlaying}
-            placeholder={snapshot.currentWord || "Start a run"}
+            placeholder={isPlaying ? "Tap here, then type" : "Start a run"}
             onKeyDown={(event) => {
               if (event.key === "Escape") {
                 onPause();

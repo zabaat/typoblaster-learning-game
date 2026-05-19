@@ -127,7 +127,7 @@ p {
 
 .hud-bar {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: 1fr 0.85fr 0.8fr minmax(170px, 1.45fr) 0.9fr 0.85fr;
   gap: 1px;
   border-bottom: 3px solid var(--border);
   background: var(--border);
@@ -168,6 +168,10 @@ p {
 .hud-stat.danger strong,
 .danger-text {
   color: var(--danger);
+}
+
+.current-word-stat strong {
+  color: var(--accent);
 }
 
 .canvas-wrap {
@@ -478,7 +482,7 @@ canvas {
   }
 
   .active-run .hud-bar {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .hud-stat {
